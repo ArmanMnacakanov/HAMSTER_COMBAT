@@ -399,6 +399,7 @@ body {
             box-shadow: 0 0 90px rgba(0, 0, 0, 0.766);
             align-items: center;
             transition: .4s;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
 
             span {
                 position: absolute;
