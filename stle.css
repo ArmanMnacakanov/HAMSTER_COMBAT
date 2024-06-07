@@ -22,6 +22,11 @@ body {
   gap: 20px;
   padding: 20px 0 0 0;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container {
+    width: 100%;
+  }
+}
 .Hamster_Container .Hamster_Close_Box {
   width: 100%;
   height: auto;
@@ -76,8 +81,19 @@ body {
      object-fit: cover;
   border-radius: 20px;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .User_Stock_Exchange_Box img {
+    width: 40px;
+    height: 40px;
+  }
+}
 .Hamster_Container .User_Stock_Exchange_Box h3 {
   color: white;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .User_Stock_Exchange_Box h3 {
+    font-size: 15px;
+  }
 }
 .Hamster_Container .User_Stock_Exchange_Box button {
   font-size: 20px;
@@ -100,6 +116,17 @@ body {
   height: 40px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .User_Stock_Exchange_Box button img {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .User_Stock_Exchange_Box button {
+    font-size: 14px;
+  }
 }
 .Hamster_Container .User_Stock_Exchange_Box button:hover {
   background-color: rgb(39, 39, 39);
@@ -128,6 +155,11 @@ body {
   gap: 15px;
   padding: 0 10px;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box {
+    gap: 5px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div {
   flex: 25%;
   padding: 10px 20px;
@@ -139,10 +171,21 @@ body {
   border-radius: 15px;
   background-color: rgb(34, 34, 34);
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div {
+    padding: 10px;
+    height: 50px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:first-child {
   color: orange;
   font-size: 14px;
   font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:first-child {
+    font-size: 10px;
+  }
 }
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child {
   color: white;
@@ -152,6 +195,11 @@ body {
   align-items: center;
   gap: 5px;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child {
+    font-size: 13px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child img {
   width: 30px;
   height: 30px;
@@ -159,10 +207,21 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:first-child {
   color: rgb(85, 0, 255);
   font-size: 14px;
   font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:first-child {
+    font-size: 10px;
+  }
 }
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:last-child {
   color: white;
@@ -172,10 +231,20 @@ body {
   align-items: center;
   gap: 5px;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:last-child {
+    font-size: 13px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:first-child {
   color: rgb(68, 255, 0);
   font-size: 14px;
   font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:first-child {
+    font-size: 10px;
+  }
 }
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child {
   color: white;
@@ -185,12 +254,23 @@ body {
   align-items: center;
   gap: 5px;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child {
+    font-size: 12px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child img {
+    width: 20px;
+    height: 20px;
+  }
 }
 .Hamster_Container .Hamster_Box .Hamster_Coin_Count {
   width: 100%;
@@ -206,10 +286,21 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hamster_Coin_Count img {
+    width: 60px;
+    height: 60px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hamster_Coin_Count span {
   font-size: 50px;
   color: white;
   font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hamster_Coin_Count span {
+    font-size: 40px;
+  }
 }
 .Hamster_Container .Hamster_Box .Hamster_Level_Box {
   width: 100%;
@@ -230,6 +321,7 @@ body {
 }
 .Hamster_Container .Hamster_Box .Hamster_Level_Box div span {
   color: white;
+  text-transform: capitalize;
 }
 .Hamster_Container .Hamster_Box .Hamster_Level_Box div span span {
   color: gray;
@@ -327,6 +419,12 @@ body {
   padding: 10px;
   text-transform: capitalize;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hamster_Energy_Boost_Box button {
+    font-size: 16px;
+    gap: 5px;
+  }
+}
 .Hamster_Container .Hamster_Box .Hamster_Energy_Boost_Box button i {
   color: orange;
   font-size: 25px;
@@ -355,6 +453,11 @@ body {
   align-items: center;
   gap: 15px;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .List ul {
+    gap: 5px;
+  }
+}
 .Hamster_Container .Hamster_Box .List ul li {
   width: 100px;
   height: auto;
@@ -363,6 +466,11 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .List ul li {
+    width: 65px;
+  }
 }
 .Hamster_Container .Hamster_Box .List ul li:first-child a {
   background-color: rgb(19, 19, 19);
@@ -382,13 +490,30 @@ body {
   text-decoration: none;
   overflow: hidden;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .List ul li a {
+    padding: 10px;
+    font-size: 11px;
+  }
+}
 .Hamster_Container .Hamster_Box .List ul li a i {
   font-size: 30px;
   color: gray;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .List ul li a i {
+    font-size: 20px;
+  }
 }
 .Hamster_Container .Hamster_Box .List ul li a img {
   width: 30px;
   height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .List ul li a img {
+    width: 20px;
+    height: 20px;
+  }
 }/*# sourceMappingURL=stle.css.map */
