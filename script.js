@@ -109,8 +109,6 @@ Hamster.addEventListener("click", (event) => {
     const feedbackSpan = document.createElement("span");
     feedbackSpan.textContent = `+${profit}`;
     feedbackSpan.style.position = "absolute";
-    feedbackSpan.style.left = `${event.clientX}px`;
-    feedbackSpan.style.top = `${event.clientY}px`;
     feedbackSpan.style.animation = "show .5s ease forwards";
     Hamster.append(feedbackSpan);
     //...................................
@@ -162,7 +160,7 @@ Boost_Box.innerHTML = `
 <div><img src ="./assets/energy.png"/><button id ="energy"><div><span>energy limit</span><span class = "EnergyPrice"><img src ="./assets/hamster-coin.png"/>${EnergyPrice}</span></div></button><i class="fa-solid fa-angle-right"></i></div>
 </div>
 `;
-document.body.append(Boost_Box);
+Hamster_Container.append(Boost_Box);
 //.....................................
 document.getElementById("Boost_Box_Close_Btn").addEventListener("click", () => {
   Boost_Box.style.display = "none";

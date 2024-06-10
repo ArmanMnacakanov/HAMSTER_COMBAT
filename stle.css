@@ -9,19 +9,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .Hamster_Container {
   width: 600px;
-  height: 100vh;
+  height: auto;
   background-color: black;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   position: relative;
-  gap: 20px;
+  gap: 10px;
   padding: 20px 0 0 0;
   animation: con 0.3s ease-in-out forwards;
   opacity: 0;
@@ -43,7 +42,7 @@ body {
 }
 .Hamster_Container .Bonus_Box {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgb(22, 22, 22);
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
@@ -58,6 +57,7 @@ body {
   position: absolute;
   z-index: 10;
   opacity: 0;
+  top: 0;
   animation: bonus 0.3s ease-in-out forwards;
 }
 @keyframes bonus {
@@ -127,7 +127,7 @@ body {
 }
 .Hamster_Container .Hamster_Registration_Box {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding: 40px;
   background-color: rgb(22, 22, 22);
   display: flex;
@@ -137,6 +137,7 @@ body {
   gap: 20px;
   position: absolute;
   z-index: 10;
+  top: 0;
 }
 .Hamster_Container .Hamster_Registration_Box img {
   width: 150px;
@@ -340,8 +341,8 @@ body {
 }
 @media (min-width: 320px) and (max-width: 552px) {
   .Hamster_Container .User_Stock_Exchange_Box button img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
   }
 }
 @media (min-width: 320px) and (max-width: 552px) {
@@ -354,10 +355,10 @@ body {
 }
 .Hamster_Container .Hamster_Box {
   width: 100%;
-  height: auto;
-  padding: 20px;
+  height: 100%;
+  padding: 15px 20px 5px 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   gap: 20px;
@@ -369,6 +370,11 @@ body {
   animation: Ham 0.3s ease-in-out forwards;
   opacity: 0;
   animation-delay: 0.1s;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box {
+    gap: 10px;
+  }
 }
 @keyframes Ham {
   from {
@@ -575,6 +581,11 @@ body {
   animation: levelshow 0.3s ease-in-out forwards;
   animation-delay: 0.4s;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hamster_Level_Box {
+    gap: 10px;
+  }
+}
 @keyframes levelshow {
   from {
     opacity: 0;
@@ -653,6 +664,12 @@ body {
   animation: Hamster 0.3s ease-in-out forwards;
   animation-delay: 0.5s;
 }
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hamster {
+    width: 300px;
+    height: 300px;
+  }
+}
 @keyframes Hamster {
   0% {
     opacity: 0;
@@ -675,6 +692,11 @@ body {
   z-index: 3;
   font-weight: 700;
   opacity: 0;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Container .Hamster_Box .Hamster span {
+    font-size: 25px;
+  }
 }
 @keyframes show {
   0% {
@@ -711,7 +733,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 5px 10px;
   animation: boost 0.3s ease-in-out forwards;
   opacity: 0;
   animation-delay: 0.6s;
@@ -828,8 +850,8 @@ body {
 }
 @media (min-width: 320px) and (max-width: 552px) {
   .Hamster_Container .Hamster_Box .List ul li a {
-    padding: 10px;
-    font-size: 11px;
+    padding: 5px 10px;
+    font-size: 10px;
   }
 }
 .Hamster_Container .Hamster_Box .List ul li a i {
@@ -856,14 +878,14 @@ body {
 
 .Boost_Box {
   width: 600px;
-  height: 100vh;
+  height: 100%;
   background-color: rgb(22, 22, 22);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  gap: 105px;
+  gap: 10px;
   position: absolute;
   top: 0;
   opacity: 0;
@@ -997,14 +1019,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   opacity: 0;
   background-color: rgb(18, 18, 18);
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
   border-top: 4px solid rgb(251, 255, 0);
   box-shadow: 0 0 60px rgb(255, 166, 0);
-  padding: 50px 10px;
+  padding: 40px 10px;
   animation: showbox 0.3s ease-in-out forwards;
 }
 @media (min-width: 320px) and (max-width: 552px) {
@@ -1066,6 +1088,7 @@ body {
 .EnergyLevel_Box p {
   text-align: center;
   color: white;
+  font-size: 13px;
 }
 .MultitapLevel_Box h3,
 .EnergyLevel_Box h3 {
