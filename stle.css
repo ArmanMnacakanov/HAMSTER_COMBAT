@@ -492,7 +492,7 @@ body {
 }
 @media (max-width: 400px) {
   .Hamster_Container .Hamster_Box .Hamster {
-    width: 55vw;
+    width: 70vw;
     height: 70vw;
   }
 }
