@@ -378,7 +378,6 @@ Category.map((e) => {
 });
 //.................................
 
-
 //...................
 const Cards_Box = document.createElement("div");
 Cards_Box.setAttribute("class", "Cards_Box");
@@ -396,10 +395,10 @@ function filterCards(category) {
 //.............................
 function createCardElement(card) {
   const Card = document.createElement("div");
-  Card.classList.add('Card')
-  if(card.category === 'Specials') {
-    Card.classList.remove('Card')
-    Card.classList.add("special-card")
+  Card.classList.add("Card");
+  if (card.category === "Specials") {
+    Card.classList.remove("Card");
+    Card.classList.add("special-card");
   }
   Card.innerHTML = `
   <div>
@@ -413,7 +412,7 @@ function createCardElement(card) {
   <h5>lvl</h5>
   <span><img src = "assets/hamster-coin.png"/>${card.price}</span>
   </div>
-  `
+  `;
   return Card;
 }
 filterCards(Category[0]);
