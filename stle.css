@@ -490,9 +490,9 @@ body {
     height: 80vw;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .Hamster_Container .Hamster_Box .Hamster {
-    width: 70vw;
+    width: 55vw;
     height: 70vw;
   }
 }
@@ -824,7 +824,7 @@ body {
   gap: 5px;
 }
 .Mine_Card_Filter_Box > button {
-  padding: 10px 15px;
+  padding: 10px 22px;
   background-color: rgb(22, 22, 22);
   color: white;
   font-size: 14px;
@@ -884,7 +884,7 @@ body {
   font-size: 12px;
 }
 .Cards_Box .special-card > div span {
-  color: wheat;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -915,7 +915,7 @@ body {
   text-align: center;
 }
 .Cards_Box .special-card > div > div span {
-  color: white;
+  color: rgb(139, 139, 139);
   font-size: 10px;
 }
 .Cards_Box .Card {
@@ -951,7 +951,7 @@ body {
   color: white;
 }
 .Cards_Box .Card > div span {
-  color: wheat;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -981,7 +981,7 @@ body {
   text-transform: capitalize;
 }
 .Cards_Box .Card > div div span {
-  color: white;
+  color: rgb(139, 139, 139);
   font-size: 10px;
 }
 
@@ -1238,7 +1238,7 @@ body {
     height: 460px;
   }
 }
-@media (min-width: 320px) and (max-width: 400px) {
+@media (min-width: 320px) and (max-width: 380px) {
   .MultitapLevel_Box,
   .EnergyLevel_Box {
     width: 100%;
