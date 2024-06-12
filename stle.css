@@ -76,7 +76,8 @@ body {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.Hamster_Container .Bonus_Box h2, .Hamster_Container .Bonus_Box h3 {
+.Hamster_Container .Bonus_Box h2,
+.Hamster_Container .Bonus_Box h3 {
   color: white;
   text-transform: capitalize;
 }
@@ -387,188 +388,6 @@ body {
     transform: translateY(0);
   }
 }
-.Hamster_Container .Hamster_Box .Hour_Coin_Box {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  padding: 0 10px;
-  opacity: 0;
-  animation-delay: 0.2s;
-  animation: HourShow 0.3s ease-in-out forwards;
-}
-@keyframes HourShow {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box {
-    gap: 5px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div {
-  flex: 25%;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 5px;
-  border-radius: 15px;
-  background-color: rgb(34, 34, 34);
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div {
-    padding: 10px;
-    height: 50px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:first-child {
-  color: orange;
-  font-size: 14px;
-  font-weight: 600;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:first-child {
-    font-size: 10px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child {
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child {
-    font-size: 13px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:first-child span:last-child img {
-    width: 20px;
-    height: 20px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:first-child {
-  color: rgb(85, 0, 255);
-  font-size: 14px;
-  font-weight: 600;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:first-child {
-    font-size: 10px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:last-child {
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:nth-child(2) span:last-child {
-    font-size: 13px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:first-child {
-  color: rgb(68, 255, 0);
-  font-size: 14px;
-  font-weight: 600;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:first-child {
-    font-size: 10px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child {
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child {
-    font-size: 12px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hour_Coin_Box div:last-child span:last-child img {
-    width: 20px;
-    height: 20px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hamster_Coin_Count {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  opacity: 0;
-  animation-delay: 0.3s;
-  animation: CoinShow 0.3s ease-in-out forwards;
-}
-@keyframes CoinShow {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.Hamster_Container .Hamster_Box .Hamster_Coin_Count img {
-  width: 80px;
-  height: 80px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hamster_Coin_Count img {
-    width: 60px;
-    height: 60px;
-  }
-}
-.Hamster_Container .Hamster_Box .Hamster_Coin_Count span {
-  font-size: 50px;
-  color: white;
-  font-weight: 600;
-}
-@media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .Hamster_Coin_Count span {
-    font-size: 40px;
-  }
-}
 .Hamster_Container .Hamster_Box .Hamster_Level_Box {
   width: 100%;
   height: auto;
@@ -665,10 +484,16 @@ body {
   animation: Hamster 0.3s ease-in-out forwards;
   animation-delay: 0.5s;
 }
-@media (min-width: 320px) and (max-width: 552px) {
+@media (min-width: 400px) and (max-width: 552px) {
   .Hamster_Container .Hamster_Box .Hamster {
-    width: 300px;
-    height: 300px;
+    width: 80vw;
+    height: 80vw;
+  }
+}
+@media (max-width: 400px) {
+  .Hamster_Container .Hamster_Box .Hamster {
+    width: 55vw;
+    height: 70vw;
   }
 }
 @keyframes Hamster {
@@ -784,7 +609,383 @@ body {
      object-fit: contain;
   padding: 10px;
 }
-.Hamster_Container .Hamster_Box .List {
+.Hamster_Container .Mine_Box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 15px 10px 5px 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgb(22, 22, 22);
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  border-top: 4px solid rgb(251, 255, 0);
+  box-shadow: 0 0 60px rgb(255, 166, 0);
+  animation: Ham 0.3s ease-in-out forwards;
+}
+
+.Hour_Coin_Box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px;
+  opacity: 0;
+  animation-delay: 0.2s;
+  animation: HourShow 0.3s ease-in-out forwards;
+}
+@keyframes HourShow {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box {
+    gap: 5px;
+  }
+}
+.Hour_Coin_Box div {
+  flex: 25%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 15px;
+  background-color: rgb(34, 34, 34);
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div {
+    padding: 10px;
+    height: 50px;
+  }
+}
+.Hour_Coin_Box div:first-child span:first-child {
+  color: orange;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:first-child span:first-child {
+    font-size: 10px;
+  }
+}
+.Hour_Coin_Box div:first-child span:last-child {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:first-child span:last-child {
+    font-size: 13px;
+  }
+}
+.Hour_Coin_Box div:first-child span:last-child img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:first-child span:last-child img {
+    width: 20px;
+    height: 20px;
+  }
+}
+.Hour_Coin_Box div:nth-child(2) span:first-child {
+  color: rgb(85, 0, 255);
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:nth-child(2) span:first-child {
+    font-size: 10px;
+  }
+}
+.Hour_Coin_Box div:nth-child(2) span:last-child {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:nth-child(2) span:last-child {
+    font-size: 13px;
+  }
+}
+.Hour_Coin_Box div:last-child span:first-child {
+  color: rgb(68, 255, 0);
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:last-child span:first-child {
+    font-size: 10px;
+  }
+}
+.Hour_Coin_Box div:last-child span:last-child {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:last-child span:last-child {
+    font-size: 12px;
+  }
+}
+.Hour_Coin_Box div:last-child span:last-child img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hour_Coin_Box div:last-child span:last-child img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.Hamster_Coin_Count {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  opacity: 0;
+  animation-delay: 0.3s;
+  animation: CoinShow 0.3s ease-in-out forwards;
+}
+@keyframes CoinShow {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.Hamster_Coin_Count img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Coin_Count img {
+    width: 60px;
+    height: 60px;
+  }
+}
+.Hamster_Coin_Count span {
+  font-size: 50px;
+  color: white;
+  font-weight: 600;
+}
+@media (min-width: 320px) and (max-width: 552px) {
+  .Hamster_Coin_Count span {
+    font-size: 40px;
+  }
+}
+
+.Mine_Card_Filter_Box {
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background-color: #1e1d1d;
+  border-radius: 10px;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.Mine_Card_Filter_Box > button {
+  padding: 10px 15px;
+  background-color: rgb(22, 22, 22);
+  color: white;
+  font-size: 14px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.Cards_Box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.Cards_Box .special-card {
+  width: 170px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1e1d1d;
+  padding: 20px;
+  gap: 15px;
+  animation: card 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes card {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.Cards_Box .special-card > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Cards_Box .special-card > div:first-child {
+  flex-direction: column;
+  align-items: center;
+}
+.Cards_Box .special-card > div h5 {
+  color: white;
+  font-size: 12px;
+}
+.Cards_Box .special-card > div span {
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Cards_Box .special-card > div span img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Cards_Box .special-card > div img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Cards_Box .special-card > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.Cards_Box .special-card > div > div h5 {
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+.Cards_Box .special-card > div > div span {
+  color: white;
+  font-size: 10px;
+}
+.Cards_Box .Card {
+  width: 170px;
+  height: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1d1d;
+  border-radius: 10px;
+  flex-direction: column;
+  animation: card 0.4s ease-in-out forwards;
+  opacity: 0;
+}
+@keyframes card {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.Cards_Box .Card > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Cards_Box .Card > div h5 {
+  color: white;
+}
+.Cards_Box .Card > div span {
+  color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Cards_Box .Card > div span img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.Cards_Box .Card > div img {
+  width: 60px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Cards_Box .Card > div div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+.Cards_Box .Card > div div h5 {
+  color: white;
+  text-transform: capitalize;
+}
+.Cards_Box .Card > div div span {
+  color: white;
+  font-size: 10px;
+}
+
+.List {
   width: auto;
   height: auto;
   background-color: rgb(32, 32, 32);
@@ -804,7 +1005,7 @@ body {
     transform: translateY(0);
   }
 }
-.Hamster_Container .Hamster_Box .List ul {
+.List ul {
   width: 100%;
   height: auto;
   display: flex;
@@ -813,65 +1014,65 @@ body {
   gap: 15px;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .List ul {
+  .List ul {
     gap: 5px;
   }
 }
-.Hamster_Container .Hamster_Box .List ul li {
+.List ul li {
   width: 100px;
   height: auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .List ul li {
+  .List ul li {
     width: 65px;
   }
 }
-.Hamster_Container .Hamster_Box .List ul li:first-child a {
-  background-color: rgb(19, 19, 19);
-}
-.Hamster_Container .Hamster_Box .List ul li a {
+.List ul li > button {
   width: 100%;
   display: block;
   padding: 10px 20px;
   display: flex;
+  border: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
   gap: 5px;
   color: white;
+  background-color: transparent;
   text-transform: capitalize;
   font-size: 15px;
-  text-decoration: none;
   overflow: hidden;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .List ul li a {
+  .List ul li > button {
     padding: 5px 10px;
     font-size: 10px;
   }
 }
-.Hamster_Container .Hamster_Box .List ul li a i {
+.List ul li > button i {
   font-size: 30px;
   color: gray;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .List ul li a i {
+  .List ul li > button i {
     font-size: 20px;
   }
 }
-.Hamster_Container .Hamster_Box .List ul li a img {
+.List ul li > button img {
   width: 30px;
   height: 30px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 320px) and (max-width: 552px) {
-  .Hamster_Container .Hamster_Box .List ul li a img {
+  .List ul li > button img {
     width: 20px;
     height: 20px;
   }
@@ -1030,10 +1231,29 @@ body {
   padding: 40px 10px;
   animation: showbox 0.3s ease-in-out forwards;
 }
-@media (min-width: 320px) and (max-width: 552px) {
+@media (max-width: 552px) {
   .MultitapLevel_Box,
   .EnergyLevel_Box {
     width: 100%;
+    height: 460px;
+  }
+}
+@media (min-width: 320px) and (max-width: 400px) {
+  .MultitapLevel_Box,
+  .EnergyLevel_Box {
+    width: 100%;
+    height: 400px;
+    animation: showbox2 0.3s ease-in-out forwards;
+  }
+  @keyframes showbox2 {
+    from {
+      opacity: 0;
+      top: 100%;
+    }
+    to {
+      opacity: 1;
+      top: 40%;
+    }
   }
 }
 @keyframes showbox {
@@ -1043,7 +1263,7 @@ body {
   }
   to {
     opacity: 1;
-    top: 57%;
+    top: 50%;
   }
 }
 .MultitapLevel_Box .close_btn,

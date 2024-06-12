@@ -42,7 +42,7 @@ body {
         width: 100%;
     }
 
-    .Bonus_Box{
+    .Bonus_Box {
         width: 100%;
         height: 100vh;
         background-color: rgb(22, 22, 22);
@@ -67,48 +67,52 @@ body {
                 opacity: 0;
                 transform: translateY(100px);
             }
-            to{
+
+            to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        img{
+        img {
             width: 150px;
             height: 150px;
             object-fit: contain;
         }
 
-        h2,h3{
+        h2,
+        h3 {
             color: white;
             text-transform: capitalize;
         }
-        span{
+
+        span {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
             color: white;
 
-            &>span{
+            &>span {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
             }
 
-            @media(min-width:320px) and (max-width:552px){
+            @media(min-width:320px) and (max-width:552px) {
                 font-size: 15px;
                 flex-wrap: wrap;
             }
 
-            img{
+            img {
                 width: 30px;
                 height: 30px;
                 object-fit: contain;
             }
         }
-        button{
+
+        button {
             width: 60%;
             padding: 10px 20px;
             border-radius: 10px;
@@ -204,7 +208,7 @@ body {
             animation: input-show .3s ease-in-out forwards;
             animation-delay: .400s;
 
-            @media(min-width:320px) and (max-width:552px){
+            @media(min-width:320px) and (max-width:552px) {
                 width: 90%;
             }
 
@@ -220,7 +224,7 @@ body {
                     transform: translateY(0);
                 }
             }
-           
+
 
 
             &:focus {
@@ -249,7 +253,8 @@ body {
                     opacity: 0;
                     transform: translateY(30px);
                 }
-                to{
+
+                to {
                     opacity: 1;
                     transform: translateY(0);
                 }
@@ -403,7 +408,7 @@ body {
         opacity: 0;
         animation-delay: .100s;
 
-        @media(min-width:320px) and (max-width:552px){
+        @media(min-width:320px) and (max-width:552px) {
             gap: 10px;
         }
 
@@ -418,218 +423,6 @@ body {
                 transform: translateY(0);
             }
 
-        }
-
-
-        .Hour_Coin_Box {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 15px;
-            padding: 0 10px;
-            opacity: 0;
-            animation-delay: .200s;
-            animation: HourShow .3s ease-in-out forwards;
-
-            @keyframes HourShow {
-                from {
-                    opacity: 0;
-                    transform: translateX(50px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            }
-
-
-            @media(min-width:320px) and (max-width:552px) {
-                gap: 5px;
-            }
-
-            div {
-                flex: 25%;
-                padding: 10px 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                gap: 5px;
-                border-radius: 15px;
-                background-color: rgb(34, 34, 34);
-
-
-                @media(min-width:320px) and (max-width:552px) {
-                    padding: 10px;
-                    height: 50px;
-                }
-
-
-                &:first-child {
-                    span {
-                        &:first-child {
-                            color: orange;
-                            font-size: 14px;
-                            font-weight: 600;
-
-
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 10px;
-                            }
-
-                        }
-
-                        &:last-child {
-                            color: white;
-                            font-size: 20px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 5px;
-
-
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 13px;
-                            }
-
-                            img {
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
-                                object-fit: cover;
-
-
-                                @media(min-width:320px) and (max-width:552px) {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                &:nth-child(2) {
-                    span {
-                        &:first-child {
-                            color: rgb(85, 0, 255);
-                            font-size: 14px;
-                            font-weight: 600;
-
-
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 10px;
-                            }
-
-                        }
-
-                        &:last-child {
-                            color: white;
-                            font-size: 20px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 5px;
-
-
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 13px;
-                            }
-                        }
-                    }
-                }
-
-                &:last-child {
-                    span {
-                        &:first-child {
-                            color: rgb(68, 255, 0);
-                            font-size: 14px;
-                            font-weight: 600;
-
-
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 10px;
-                            }
-                        }
-
-                        &:last-child {
-                            color: white;
-                            font-size: 20px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 5px;
-
-
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 12px;
-                            }
-
-                            img {
-                                width: 30px;
-                                height: 30px;
-                                border-radius: 50%;
-                                object-fit: cover;
-
-
-                                @media(min-width:320px) and (max-width:552px) {
-                                    width: 20px;
-                                    height: 20px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .Hamster_Coin_Count {
-            width: 100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            opacity: 0;
-            animation-delay: .300s;
-            animation: CoinShow .3s ease-in-out forwards;
-
-            @keyframes CoinShow {
-                from {
-                    opacity: 0;
-                    transform: translateY(50px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            img {
-                width: 80px;
-                height: 80px;
-                object-fit: cover;
-
-
-                @media(min-width:320px) and (max-width:552px) {
-                    width: 60px;
-                    height: 60px;
-                }
-            }
-
-            span {
-                font-size: 50px;
-                color: white;
-                font-weight: 600;
-
-
-                @media(min-width:320px) and (max-width:552px) {
-                    font-size: 40px;
-                }
-            }
         }
 
         .Hamster_Level_Box {
@@ -737,9 +530,14 @@ body {
             animation: Hamster .3s ease-in-out forwards;
             animation-delay: .500s;
 
-            @media(min-width:320px) and (max-width:552px) {
-                width: 300px;
-                height: 300px;
+            @media (min-width:400px)and (max-width: 552px) {
+                width: 80vw;
+                height: 80vw;
+            }
+
+            @media (max-width: 400px) {
+                width: 55vw;
+                height: 70vw;
             }
 
             @keyframes Hamster {
@@ -869,104 +667,183 @@ body {
                 }
             }
         }
+    }
 
-        .List {
-            width: auto;
-            height: auto;
-            background-color: rgb(32, 32, 32);
-            padding: 5px 15px;
-            border-radius: 15px;
-            animation: list .3s ease-in-out forwards;
+    .Mine_Box {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        padding: 15px 10px 5px 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(22, 22, 22);
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        border-top: 4px solid rgb(251, 255, 0);
+        box-shadow: 0 0 60px rgb(255, 166, 0);
+        animation: Ham .3s ease-in-out forwards;
+    }
+}
+
+.Hour_Coin_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 0 10px;
+    opacity: 0;
+    animation-delay: .200s;
+    animation: HourShow .3s ease-in-out forwards;
+
+    @keyframes HourShow {
+        from {
             opacity: 0;
-            animation-delay: .700s;
+            transform: translateX(50px);
+        }
 
-            @keyframes list {
-                from {
-                    opacity: 0;
-                    transform: translateY(100px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            ul {
-                width: 100%;
-                height: auto;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 15px;
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 
 
-                @media(min-width:320px) and (max-width:552px) {
-                    gap: 5px;
-                }
+    @media(min-width:320px) and (max-width:552px) {
+        gap: 5px;
+    }
 
-                li {
-                    width: 100px;
-                    height: auto;
-                    overflow: hidden;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border-radius: 15px;
+    div {
+        flex: 25%;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 15px;
+        background-color: rgb(34, 34, 34);
+
+
+        @media(min-width:320px) and (max-width:552px) {
+            padding: 10px;
+            height: 50px;
+        }
+
+
+        &:first-child {
+            span {
+                &:first-child {
+                    color: orange;
+                    font-size: 14px;
+                    font-weight: 600;
 
 
                     @media(min-width:320px) and (max-width:552px) {
-                        width: 65px;
+                        font-size: 10px;
                     }
 
-                    &:first-child {
+                }
 
-                        a {
-                            background-color: rgb(19, 19, 19);
-                        }
+                &:last-child {
+                    color: white;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 13px;
                     }
 
-                    a {
-                        width: 100%;
-                        display: block;
-                        padding: 10px 20px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex-direction: column;
-                        gap: 5px;
-                        color: white;
-                        text-transform: capitalize;
-                        font-size: 15px;
-                        text-decoration: none;
-                        overflow: hidden;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
 
 
                         @media(min-width:320px) and (max-width:552px) {
-                            padding: 5px 10px;
-                            font-size: 10px;
+                            width: 20px;
+                            height: 20px;
                         }
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            span {
+                &:first-child {
+                    color: rgb(85, 0, 255);
+                    font-size: 14px;
+                    font-weight: 600;
 
 
-                        i {
-                            font-size: 30px;
-                            color: gray;
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 10px;
+                    }
 
-                            @media(min-width:320px) and (max-width:552px) {
-                                font-size: 20px;
-                            }
-                        }
+                }
 
-                        img {
-                            width: 30px;
-                            height: 30px;
-                            object-fit: cover;
+                &:last-child {
+                    color: white;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
 
 
-                            @media(min-width:320px) and (max-width:552px) {
-                                width: 20px;
-                                height: 20px;
-                            }
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        &:last-child {
+            span {
+                &:first-child {
+                    color: rgb(68, 255, 0);
+                    font-size: 14px;
+                    font-weight: 600;
+
+
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 10px;
+                    }
+                }
+
+                &:last-child {
+                    color: white;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 12px;
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        object-fit: cover;
+
+
+                        @media(min-width:320px) and (max-width:552px) {
+                            width: 20px;
+                            height: 20px;
                         }
                     }
                 }
@@ -975,6 +852,345 @@ body {
     }
 }
 
+.Hamster_Coin_Count {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    animation-delay: .300s;
+    animation: CoinShow .3s ease-in-out forwards;
+
+    @keyframes CoinShow {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+
+
+        @media(min-width:320px) and (max-width:552px) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    span {
+        font-size: 50px;
+        color: white;
+        font-weight: 600;
+
+
+        @media(min-width:320px) and (max-width:552px) {
+            font-size: 40px;
+        }
+    }
+}
+
+.Mine_Card_Filter_Box {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    background-color: #1e1d1d;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.28);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+
+    &>button {
+        padding: 10px 15px;
+        background-color: rgb(22, 22, 22);
+        color: white;
+        font-size: 14px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+}
+
+.Cards_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .special-card {
+        width: 170px;
+        height: 200px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #1e1d1d;
+        padding: 20px;
+        gap: 15px;
+        animation: card .4s ease-in-out forwards;
+        opacity: 0;
+
+        @keyframes card {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &>div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:first-child {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h5 {
+                color: white;
+                font-size: 12px;
+            }
+
+            span {
+                color: wheat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    object-fit: contain;
+                }
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+            }
+
+            &>div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+
+                h5 {
+                    color: white;
+                    text-transform: capitalize;
+                    text-align: center;
+                }
+
+                span {
+                    color: white;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .Card {
+        width: 170px;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1e1d1d;
+        border-radius: 10px;
+        flex-direction: column;
+        animation: card .4s ease-in-out forwards;
+        opacity: 0;
+
+        @keyframes card {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &>div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h5 {
+                color: white;
+            }
+
+            span {
+                color: wheat;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    object-fit: contain;
+                }
+            }
+
+            img {
+                width: 60px;
+                height: 70px;
+                object-fit: cover;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+
+                h5 {
+                    color: white;
+                    text-transform: capitalize;
+                }
+
+                span {
+                    color: white;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+
+.List {
+    width: auto;
+    height: auto;
+    background-color: rgb(32, 32, 32);
+    padding: 5px 15px;
+    border-radius: 15px;
+    animation: list .3s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: .700s;
+
+    @keyframes list {
+        from {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+
+        @media(min-width:320px) and (max-width:552px) {
+            gap: 5px;
+        }
+
+        li {
+            width: 100px;
+            height: auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+
+
+            @media(min-width:320px) and (max-width:552px) {
+                width: 65px;
+            }
+
+            &>button {
+                width: 100%;
+                display: block;
+                padding: 10px 20px;
+                display: flex;
+                border: none;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                cursor: pointer;
+                gap: 5px;
+                color: white;
+                background-color: transparent;
+                text-transform: capitalize;
+                font-size: 15px;
+                overflow: hidden;
+
+
+                @media(min-width:320px) and (max-width:552px) {
+                    padding: 5px 10px;
+                    font-size: 10px;
+                }
+
+
+                i {
+                    font-size: 30px;
+                    color: gray;
+
+                    @media(min-width:320px) and (max-width:552px) {
+                        font-size: 20px;
+                    }
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+
+
+                    @media(min-width:320px) and (max-width:552px) {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 .Boost_Box {
     width: 600px;
@@ -993,9 +1209,10 @@ body {
     animation: showare .3s ease-in-out forwards;
 
 
-    @media(min-width:320px) and (max-width:552px){
+    @media(min-width:320px) and (max-width:552px) {
         width: 100%;
     }
+
     @keyframes showare {
         from {
             opacity: 0;
@@ -1152,8 +1369,27 @@ body {
     padding: 40px 10px;
     animation: showbox .3s ease-in-out forwards;
 
-    @media(min-width:320px) and (max-width:552px){
-       width: 100%;
+    @media (max-width:552px) {
+        width: 100%;
+        height: 460px;
+    }
+
+    @media(min-width:320px) and (max-width:400px) {
+        width: 100%;
+        height: 400px;
+        animation: showbox2 .3s ease-in-out forwards;
+
+        @keyframes showbox2 {
+            from {
+                opacity: 0;
+                top: 100%;
+            }
+
+            to {
+                opacity: 1;
+                top: 40%;
+            }
+        }
     }
 
     @keyframes showbox {
@@ -1164,7 +1400,7 @@ body {
 
         to {
             opacity: 1;
-            top: 57%;
+            top: 50%;
         }
     }
 
@@ -1192,10 +1428,10 @@ body {
         height: 150px;
         object-fit: contain;
 
-        @media(min-width:320px) and (max-width:552px){
+        @media(min-width:320px) and (max-width:552px) {
             width: 100px;
             height: 100px;
-         }
+        }
     }
 
     h1 {

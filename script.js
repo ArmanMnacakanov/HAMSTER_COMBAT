@@ -1,4 +1,21 @@
 //................. HAMSTER ......................//
+function requestFullscreen() {
+  if (!document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) {
+    // Firefox
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    // Chrome, Safari and Opera
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) {
+    // IE/Edge
+    document.documentElement.msRequestFullscreen();
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  requestFullscreen();
+});
 
 const Hamster_Container = document.createElement("section");
 Hamster_Container.setAttribute("class", "Hamster_Container");
@@ -9,8 +26,8 @@ Hamster_Registration_Box.setAttribute("class", "Hamster_Registration_Box");
 Hamster_Registration_Box.innerHTML = `
 <img src = "./assets/hamster-coin.png"/>
 <h1>Добро Пожаловать!</h1>
-<input type= "text" pleaceholder="Введите Имя" id = "name"/>
-<input type = "text" pleaceholder = "Введите Фамилия" id = "lastname" />
+<input type= "text" placeholder="Введите Имя" id = "name"/>
+<input type = "text" placeholder = "Введите Фамилия" id = "lastname" />
 <button id = "registration_Btn">Продолжить</button>
 `;
 //......................................
@@ -28,19 +45,29 @@ User_stock_exchange_box.innerHTML = `
 //............................
 const Hamster_Box = document.createElement("div");
 Hamster_Box.setAttribute("class", "Hamster_Box");
-const Hour_Coin_Box = document.createElement("div");
-Hour_Coin_Box.setAttribute("class", "Hour_Coin_Box");
 var profit = 1;
-Hour_Coin_Box.innerHTML = `
+const Hour_Coin = () => {
+  const Hour_Coin_Box = document.createElement("div");
+  Hour_Coin_Box.setAttribute("class", "Hour_Coin_Box");
+  Hour_Coin_Box.innerHTML = `
 <div><span>прибыль за тап</span> <span class = "Profit"><img src="./assets/hamster-coin.png"/>+${profit}</span></div>
 <div><span>прибыль для апа</span> <span>10K</span></div>
 <div><span>прибыль в час</span> <span><img src="./assets/hamster-coin.png"/>+500K</span></div>
 `;
+  return Hour_Coin_Box;
+};
+
 const Hamster_Coin_Count = document.createElement("div");
 Hamster_Coin_Count.setAttribute("class", "Hamster_Coin_Count");
 var CoinCount = 0;
 //.....................................................
 Hamster_Coin_Count.innerHTML = `
+<img src = "./assets/hamster-coin.png"/><span>${CoinCount}</span>
+`;
+const Hamster_Coin_Count2 = document.createElement("div");
+Hamster_Coin_Count2.setAttribute("class", "Hamster_Coin_Count");
+//.....................................................
+Hamster_Coin_Count2.innerHTML = `
 <img src = "./assets/hamster-coin.png"/><span>${CoinCount}</span>
 `;
 //...........................................
@@ -67,6 +94,9 @@ Hamster.addEventListener("click", (event) => {
     Boost_Box.querySelector(
       "h1"
     ).innerHTML = `<img src = "./assets/hamster-coin.png"/>${CoinCount}`;
+    Hamster_Coin_Count2.innerHTML = `
+    <img src = "./assets/hamster-coin.png"/><span>${CoinCount}</span>
+    `;
     level.value = Math.min(level.value + profit, level.max);
     //........................................
     if (level.value >= level.max) {
@@ -166,31 +196,254 @@ document.getElementById("Boost_Box_Close_Btn").addEventListener("click", () => {
   Boost_Box.style.display = "none";
 });
 //..............................................
-const List = document.createElement("div");
-List.setAttribute("class", "List");
-List.innerHTML = `
-<ul>
-<li><a href = "#"><img src = "./assets/binance.png"/>exchange</a></li>
-<li><a href = "#"><img src = "./assets/mine.png"/>mine</a></li>
-<li><a href = "#"><i class="fa-solid fa-users"></i> friends</a></li>
-<li><a href = "#"><i class="fa-solid fa-coins"></i> earn</a></li>
-<li><a href = "#"><img src = "./assets/hamster-coin.png"/>airdrop</a></li>
-</ul>
-`;
-Hamster_Box.append(
-  Hour_Coin_Box,
-  Hamster_Coin_Count,
-  Hamster_Level_Box,
-  Hamster,
-  Hamster_Energy_Boost_Box,
-  List
-);
+const createList = () => {
+  const List = document.createElement("div");
+  List.setAttribute("class", "List");
+  List.innerHTML = `
+    <ul>
+      <li><button id="Exchange"><img src="./assets/binance.png"/>exchange</button></li>
+      <li><button id="Mine"><img src="./assets/mine.png"/>mine</button></li>
+      <li><button><i class="fa-solid fa-users"></i> friends</button></li>
+      <li><button><i class="fa-solid fa-coins"></i> earn</button></li>
+      <li><button><img src="./assets/hamster-coin.png"/>airdrop</button></li>
+    </ul>
+  `;
+  return List;
+};
+//...................................
+const Mine_Box = document.createElement("div");
+Mine_Box.setAttribute("class", "Mine_Box");
+Mine_Box.style.display = "none";
+
 Hamster_Container.append(
   Hamster_Registration_Box,
   Hamster_Close_Box,
   User_stock_exchange_box,
-  Hamster_Box
+  Hamster_Box,
+  Mine_Box
 );
+const Hour_Coin1 = Hour_Coin();
+const Hour_Coin2 = Hour_Coin();
+//..............
+const List1 = createList();
+const List2 = createList();
+Hamster_Box.append(
+  Hour_Coin1,
+  Hamster_Coin_Count,
+  Hamster_Level_Box,
+  Hamster,
+  Hamster_Energy_Boost_Box,
+  List1
+);
+
+//.................... MINE CARD DATA ...........................//
+const Mine_Crad_Data = [
+  {
+    category: "Markets",
+    img: "./assets/cards/fan-tokens.png",
+    name: "fan-tokens",
+    price: 400,
+    price_info: "прибыль в час 100",
+    description:
+      "цифравые активы для экслюзивных впечетлений и привилегий фанатов",
+  },
+  {
+    category: "Markets",
+    img: "./assets/cards/staking.png",
+    name: "staking",
+    price: 350,
+    price_info: "прибыль в час 150",
+    description:
+      "блок криптовалюты для получения вознаграждений и поддержки сетевой безопасности",
+  },
+  {
+    category: "Markets",
+    img: "./assets/cards/btc-pairs.png",
+    name: "BTC pairs",
+    price: 520,
+    price_info: "прибыль в час 350",
+    description: "тарговые парыб включающие биткойн и другую криптовалюту",
+  },
+  {
+    category: "PR&Team",
+    img: "./assets/cards/ceo.png",
+    name: "ceo",
+    price: 650,
+    price_info: "прибыль в час 350",
+    description: "улучшите свои лидерские и управленческие способности",
+  },
+  {
+    category: "PR&Team",
+    img: "./assets/cards/bisdev-team.png",
+    name: "BisDev team",
+    price: 700,
+    price_info: "прибыль в час 350",
+    description: "соберите команду для расширения возможностей бизнеса",
+  },
+  {
+    category: "PR&Team",
+    img: "./assets/cards/hamstergram.png",
+    name: "HamsterGram",
+    price: 680,
+    price_info: "прибыль в час 450",
+    description: "увеличтье присутствие и вовлечность вашей биржы в instagram",
+  },
+  {
+    category: "PR&Team",
+    img: "./assets/cards/compliance-officer.png",
+    name: ".Compliance offer",
+    price: 1200,
+    price_info: "прибыль в час 750",
+    description: "",
+  },
+  {
+    category: "Legal",
+    img: "./assets/cards/kyc.png",
+    name: "KYC",
+    price: 850,
+    price_info: "прибыль в час 50",
+    description:
+      "внедрите проверку << знай своего клиента >> для индентификации пользователей",
+  },
+  {
+    category: "Legal",
+    img: "./assets/cards/kyb.png",
+    name: "KYB",
+    price: 600,
+    price_info: "прибыль в час 150",
+    description:
+      "внедрите проверку << знай свой бизнес >> для индентификации компаний",
+  },
+  {
+    category: "Legal",
+    img: "assets/cards/sec-transparancy.png",
+    name: "SEC transparancy",
+    price: 630,
+    price_info: "прибыль в час 350",
+    description: "работайте в SEC для более четкой делевой практики",
+  },
+  {
+    category: "Legal",
+    img: "./assets/cards/licence-japan.png",
+    name: "Licence Japan",
+    price: 630,
+    price_info: "прибыль в час 650",
+    description: "получите юридическое разрешение на работу в японии",
+  },
+  {
+    category: "Specials",
+    img: "./assets/cards/hamster-kombat-merch.png",
+    name: "Мерч Hamster Combat",
+    price: 830,
+    price_info: "прибыль в час 1200K",
+    description:
+      "встречайте нашу лимитированную коллекцию одежды Hamster Combat. не усустите шанс стать частью чего-то уникального",
+  },
+  {
+    category: "Specials",
+    img: "./assets/cards/bitcoin-pizza.png",
+    name: "Биткойн, пицца или Хомяки",
+    price: 1350,
+    price_info: "прибыль в час 830K",
+    description:
+      "не упустите новые возможностию․ они прямо вокруг вас․биткойн,ноткойн,хомяки․․․",
+  },
+  {
+    category: "Specials",
+    img: "./assets/cards/apps-center-listing.png",
+    name: "Еулеграм = массовое роспространение",
+    price: 950,
+    price_info: "прибыль в час 1500K",
+    description:
+      "этот маленький шаг может стать началом чего-то действительно грандиозного",
+  },
+  {
+    category: "Specials",
+    img: "./assets/cards/bogdanoff-is-calling.png",
+    name: "Мощь Bogdanoff работает на тебя",
+    price: 1600,
+    price_info: "прибыль в час 1700K",
+    description:
+      "никто не знает, что произойдет, когда Bogdanoff даст сигнал․ сегодня тебе повезло-твоя ставка сыгрла",
+  },
+];
+const Mine_Card_Filter_Box = document.createElement("div");
+Mine_Card_Filter_Box.setAttribute("class", "Mine_Card_Filter_Box");
+const Category = ["Markets", "PR&Team", "Legal", "Specials"];
+Category.map((e) => {
+  const Category_Btn = document.createElement("button");
+  Category_Btn.innerText = e;
+  Category_Btn.addEventListener("click", () => filterCards(e));
+  Mine_Card_Filter_Box.append(Category_Btn);
+});
+//.................................
+
+
+//...................
+const Cards_Box = document.createElement("div");
+Cards_Box.setAttribute("class", "Cards_Box");
+
+function filterCards(category) {
+  Cards_Box.innerHTML = ""; // очищаем контейнер для карточек
+  const filteredCards = Mine_Crad_Data.filter(
+    (card) => card.category === category
+  );
+  filteredCards.forEach((card) => {
+    const cardElement = createCardElement(card);
+    Cards_Box.append(cardElement);
+  });
+}
+//.............................
+function createCardElement(card) {
+  const Card = document.createElement("div");
+  Card.classList.add('Card')
+  if(card.category === 'Specials') {
+    Card.classList.remove('Card')
+    Card.classList.add("special-card")
+  }
+  Card.innerHTML = `
+  <div>
+  <img src = "${card.img}"/>
+  <div>
+  <h5>${card.name}</h5>
+  <span>${card.price_info}</span>
+  </div>
+  </div>
+  <div>
+  <h5>lvl</h5>
+  <span><img src = "assets/hamster-coin.png"/>${card.price}</span>
+  </div>
+  `
+  return Card;
+}
+filterCards(Category[0]);
+
+Mine_Box.append(
+  Hour_Coin2,
+  Hamster_Coin_Count2,
+  Mine_Card_Filter_Box,
+  Cards_Box,
+  List2
+);
+List1.querySelector("#Exchange").style.backgroundColor = "rgb(19, 19, 19)";
+//..............................
+const addEventListenersToList = (list) => {
+  list.querySelector("#Exchange").addEventListener("click", () => {
+    // document.getElementById('Mine').style.backgroundColor = 'transparent';
+    List1.querySelector("#Exchange").style.backgroundColor = "rgb(19, 19, 19)";
+    Hamster_Box.style.display = "flex";
+    Mine_Box.style.display = "none";
+  });
+  list.querySelector("#Mine").addEventListener("click", () => {
+    document.getElementById("Exchange").style.backgroundColor = "transparent";
+    List2.querySelector("#Mine").style.backgroundColor = "rgb(19, 19, 19)";
+    Hamster_Box.style.display = "none";
+    Mine_Box.style.display = "flex";
+  });
+};
+// Добавляем события к каждому списку
+addEventListenersToList(List1);
+addEventListenersToList(List2);
 //.......................................
 Hamster_Box.style.display = "none";
 document.getElementById("registration_Btn").addEventListener("click", () => {
@@ -252,6 +505,9 @@ document.getElementById("registration_Btn").addEventListener("click", () => {
       Hamster_Coin_Count.innerHTML = `
 <img src = "./assets/hamster-coin.png"/><span>${CoinCount}</span>
 `;
+      Hamster_Coin_Count2.innerHTML = `
+<img src = "./assets/hamster-coin.png"/><span>${CoinCount}</span>
+`;
       level.value = Math.min(level.value + CoinCount, level.max);
     });
   }
@@ -278,7 +534,7 @@ MultitapLevel_Box.innerHTML = `
     <img src = "./assets/tap.png"/>
     <h1>multitap</h1>
     <p>увеличивеат количество монет которое вы можете заработать за одно нажатие</p>
-    <h3>+1 ьщнет за тап для 1 уровня</h3>
+    <h3>+1 монет за тап для ${LevelValue} уровня</h3>
     <h2><img src = "./assets/hamster-coin.png"/> ${TapPrice}</h2>
     <button id ="Tap_Buy_Btn">получить</button>
     `;
