@@ -834,6 +834,11 @@ body {
   border-radius: 5px;
   outline: none;
 }
+@media (max-width: 380px) {
+  .Mine_Card_Filter_Box > button {
+    padding: 10px;
+  }
+}
 
 .Cards_Box {
   width: 100%;
