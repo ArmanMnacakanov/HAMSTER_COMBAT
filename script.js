@@ -36,13 +36,6 @@ Hamster_Registration_Box.innerHTML = `
 <input type = "text" placeholder = "Введите Фамилия" id = "lastname" />
 <button id = "registration_Btn">Продолжить</button>
 `;
-
-//......................................
-const Hamster_Close_Box = document.createElement("div");
-Hamster_Close_Box.setAttribute("class", "Hamster_Close_Box");
-Hamster_Close_Box.innerHTML = `
-<div><button><i class="fa-solid fa-xmark"></i></button> <h1>hamster combat</h1> </div><button><i class="fa-solid fa-ellipsis-vertical"></i></button>
-`;
 //....................................
 const User_stock_exchange_box = document.createElement("div");
 User_stock_exchange_box.setAttribute("class", "User_Stock_Exchange_Box");
@@ -232,7 +225,6 @@ Mine_Box.style.display = "none";
 
 Hamster_Container.append(
   Hamster_Registration_Box,
-  Hamster_Close_Box,
   User_stock_exchange_box,
   Hamster_Box,
   Mine_Box
